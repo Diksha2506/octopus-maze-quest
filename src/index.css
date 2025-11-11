@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Underwater theme - Deep ocean colors */
+    --background: 220 70% 8%;
+    --foreground: 180 100% 95%;
+
+    --card: 220 60% 12%;
+    --card-foreground: 180 100% 95%;
+
+    --popover: 220 60% 10%;
+    --popover-foreground: 180 100% 95%;
+
+    /* Bright cyan for primary actions */
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 70% 8%;
+
+    /* Coral pink for secondary */
+    --secondary: 340 90% 65%;
+    --secondary-foreground: 220 70% 8%;
+
+    /* Darker blue for muted */
+    --muted: 220 50% 20%;
+    --muted-foreground: 180 60% 70%;
+
+    /* Purple accent for octopus theme */
+    --accent: 280 80% 60%;
+    --accent-foreground: 180 100% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 180 100% 95%;
+
+    --border: 220 40% 25%;
+    --input: 220 40% 25%;
+    --ring: 180 100% 50%;
+
+    --radius: 1rem;
+
+    /* Custom game colors */
+    --maze-wall: 220 60% 15%;
+    --maze-path: 200 70% 25%;
+    --maze-hint: 160 100% 50%;
+    --goal-coral: 340 90% 65%;
+    --octopus: 280 80% 60%;
+    
+    /* Gradients */
+    --gradient-ocean: linear-gradient(180deg, hsl(220, 70%, 8%) 0%, hsl(200, 60%, 15%) 100%);
+    --glow-cyan: 0 0 20px hsl(180 100% 50% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
